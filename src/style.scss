@@ -1,0 +1,99 @@
+/* ネスト */
+button {
+  background: #FF0000;
+
+  &.blue {
+    background: #0000FF;
+  }
+  .green {
+    background: #00FF00;
+  }
+}
+
+// 変数
+$base-color: #666;
+$base-space: 15px;
+
+body {
+  color: $base-color;
+}
+
+.panel {
+  border: 1px solid $base-color;
+  padding: $base-space;
+}
+
+// 四則演算
+$base-padding: 5px;
+
+.col-3 {
+  width: (100% / 3);
+}
+.container {
+  padding: ($base-padding * 3) ($base-padding * 2);
+  width: (100% - 10);
+}
+
+// 使い回し
+@mixin border-bottom($color: #666) {
+  border-bottom: 1px solid $color;
+}
+
+h1 {
+  @include border-bottom(#2a0)
+}
+
+@mixin box-layout {
+  padding: 30px;
+  @include border-bottom;
+}
+
+.block {
+  @include box-layout;
+}
+
+// 継承
+.box {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #ccc;
+
+  p {
+    line-height: 1.8;
+  }
+}
+
+.content {
+  @extend .box;
+  background-color: #eee;
+}
+
+// プレースホルダー
+%error-box {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #FF0000;
+}
+
+.error-contents {
+  @extend %error-box;
+  p {
+    line-height: 1;
+  }
+}
+.note {
+  @extend %error-box;
+}
+
+// アンパサンド(&)
+.c-block {
+  width: 960px;
+
+  &-element {
+    padding: 10px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

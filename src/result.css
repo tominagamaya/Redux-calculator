@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/* ネスト */
+button {
+  background: #FF0000;
+}
+
+button.blue {
+  background: #0000FF;
+}
+
+button .green {
+  background: #00FF00;
+}
+
+body {
+  color: #666;
+}
+
+.panel {
+  border: 1px solid #666;
+  padding: 15px;
+}
+
+.col-3 {
+  width: 33.33333%;
+}
+
+.container {
+  padding: 15px 10px;
+  width: 90%;
+}
+
+h1 {
+  border-bottom: 1px solid #2a0;
+}
+
+.block {
+  padding: 30px;
+  border-bottom: 1px solid #666;
+}
+
+.box, .content {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #ccc;
+}
+
+.box p, .content p {
+  line-height: 1.8;
+}
+
+.content {
+  background-color: #eee;
+}
+
+.error-contents, .note {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #FF0000;
+}
+
+.error-contents p {
+  line-height: 1;
+}
+
+.c-block {
+  width: 960px;
+}
+
+.c-block-element {
+  padding: 10px;
+}
+
+.c-block-element:hover {
+  text-decoration: underline;
+}
